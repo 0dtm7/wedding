@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sergey and Lyudmila Wedding//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sergey-lyudmila-zags-20260627@example.com
+DTSTAMP:20260604T000000Z
+DTSTART:20260627T100000
+DTEND:20260627T110000
+SUMMARY:Роспись Сергея и Людмилы
+LOCATION:Дворец торжеств, Сургут, бульвар Свободы, 5
+DESCRIPTION:Роспись в ЗАГСе. Сбор гостей заранее у Дворца торжеств.
+END:VEVENT
+BEGIN:VEVENT
+UID:sergey-lyudmila-restaurant-20260627@example.com
+DTSTAMP:20260604T000000Z
+DTSTART:20260627T160000
+DTEND:20260627T220000
+SUMMARY:Праздничный ужин Сергея и Людмилы
+LOCATION:Ресторан La Storia, Сургут, ул. Энтузиастов, 44а
+DESCRIPTION:Праздничный ужин в ресторане La Storia.
+END:VEVENT
+END:VCALENDAR

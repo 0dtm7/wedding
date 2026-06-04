@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS rsvp_answers (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  status TEXT NOT NULL,
+  status_label TEXT NOT NULL,
+  guest_count INTEGER NOT NULL DEFAULT 0,
+  comment TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

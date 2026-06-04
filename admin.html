@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список гостей — Сергей & Людмила</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <main class="admin-page">
+    <section class="section admin-hero reveal visible">
+      <img class="admin-mark" src="assets/logo-monogram.png" alt="Монограмма Сергея и Людмилы" />
+      <a class="back-link" href="index.html">← Вернуться к приглашению</a>
+      <p class="section-label">Панель организаторов</p>
+      <h1 class="admin-title">Список гостей</h1>
+      <p class="admin-lead">
+        Здесь сохраняются ответы из формы: кто придёт, кто не сможет и сколько гостей планируется.
+      </p>
+    </section>
+
+    <section class="section admin-login reveal visible" id="loginBox">
+      <p class="section-label">Вход</p>
+      <h2>Введите пароль</h2>
+      <p>
+        Пароль по умолчанию: <strong>2706</strong>. Его можно поменять в переменной <code>ADMIN_PASSWORD</code> на хостинге.
+      </p>
+      <form class="rsvp-form" id="passwordForm">
+        <label>
+          Пароль администратора
+          <input type="password" id="password" placeholder="Введите пароль" required />
+        </label>
+        <button class="btn btn-primary" type="submit">Открыть список</button>
+      </form>
+      <p class="admin-message" id="adminMessage" hidden></p>
+    </section>
+
+    <section class="section admin-panel reveal visible" id="adminPanel" hidden>
+      <div class="admin-toolbar">
+        <div>
+          <p class="section-label">Ответы гостей</p>
+          <h2>Кто придёт</h2>
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn-secondary" id="refreshBtn" type="button">Обновить</button>
+          <button class="btn btn-primary" id="exportBtn" type="button">Скачать CSV</button>
+          <button class="btn btn-secondary" id="logoutBtn" type="button">Выйти</button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article>
+          <span id="totalAnswers">0</span>
+          <p>Всего ответов</p>
+        </article>
+        <article>
+          <span id="attendingAnswers">0</span>
+          <p>Ответили «приду»</p>
+        </article>
+        <article>
+          <span id="totalGuests">0</span>
+          <p>Гостей всего</p>
+        </article>
+        <article>
+          <span id="declinedAnswers">0</span>
+          <p>Не смогут прийти</p>
+        </article>
+      </div>
+
+      <div class="table-wrap">
+        <table class="guest-table">
+          <thead>
+            <tr>
+              <th>Дата ответа</th>
+              <th>Имя</th>
+              <th>Ответ</th>
+              <th>Гостей</th>
+              <th>Комментарий</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="guestTableBody"></tbody>
+        </table>
+      </div>
+
+      <p class="empty-state" id="emptyState">Пока ответов нет.</p>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

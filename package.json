@@ -1,0 +1,19 @@
+{
+  "name": "wedding-invitation-sergey-lyudmila-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Сайт-приглашение на свадьбу с RSVP, Vercel Functions и Neon Postgres.",
+  "scripts": {
+    "dev": "vercel dev --listen 3000",
+    "start": "vercel dev --listen 3000"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  },
+  "devDependencies": {
+    "vercel": "^34.3.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

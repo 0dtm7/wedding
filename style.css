@@ -455,20 +455,39 @@ h1 span {
   align-items: center;
 }
 
-.palette {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  flex-wrap: wrap;
+.mood-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 250, 244, .74);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 54px rgba(83, 54, 36, .10);
 }
 
-.palette span {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: var(--tone);
-  border: 8px solid rgba(255,255,255,.7);
-  box-shadow: 0 16px 38px rgba(83,54,36,.12);
+.mood-card span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(164, 117, 87, .10);
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mood-card strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: .95;
+  color: var(--accent-dark);
+  margin-bottom: 14px;
+}
+
+.mood-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .quote {
@@ -803,14 +822,11 @@ textarea:focus {
     border-radius: 24px;
   }
 
-  .palette {
-    justify-content: flex-start;
+  .mood-card {
+    padding: 22px;
+    border-radius: 24px;
   }
 
-  .palette span {
-    width: 54px;
-    height: 54px;
-  }
 
   .footer {
     width: calc(100% - 24px);
